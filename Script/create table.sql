@@ -132,4 +132,7 @@ create table tb_lotecompra(
     quantidade int not null
 );
 
-create table tb_produto(id_produto int not null, nome varchar());
+create table tb_produto(
+    id_produto int not null, 
+    nome varchar(30) not null
+);
