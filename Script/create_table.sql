@@ -1,20 +1,20 @@
 create table tb_cliente(
-    id_cliente int not null auto_increment,
+    id_cliente int not null,
     cpf varchar(30) not null,
     nome varchar(100) not null,
     dt_nascimento date not null,
-    sexo char(1) not null,
+    sexo char(01) not null,
     email varchar(30) not null,
     rg varchar(30) not null,
     primary key(id_cliente)
 );
 
 create table tb_empregado(
-    id_empregado int not null auto_increment,
+    id_empregado int not null,
     cpf varchar(30) not null,
     nome varchar(100) not null,
     dt_nascimento date not null,
-    sexo char(1) not null,
+    sexo char(01) not null,
     email varchar(30) not null,
     rg varchar(30) not null,
     dt_admissao date not null,
@@ -22,27 +22,27 @@ create table tb_empregado(
 );
 
 create table tb_pais(
-    id_pais int not null auto_increment,
+    id_pais int not null,
     nome varchar(50) not null,
     primary key(id_pais)
 );
 
 create table tb_estado(
-    id_estado int not null auto_increment,
+    id_estado int not null,
     id_pais int not null,
     nome varchar(50) not null,
     primary key(id_estado)
 );
 
 create table tb_cidade(
-    id_cidade int not null auto_increment,
+    id_cidade int not null,
     id_estado int not null,
     nome varchar(50) not null,
     primary key(id_cidade)
 );
 
 create table tb_logradouro(
-    id_logradouro int not null auto_increment,
+    id_logradouro int not null,
     id_cidade int not null,
     nome varchar(50) not null,
     numero int not null,
@@ -50,7 +50,7 @@ create table tb_logradouro(
 );
 
 create table tb_endereco(
-    id_endereco int not null auto_increment,
+    id_endereco int not null,
     id_cliente int,
     id_empregado int,
     id_logradouro int not null,
@@ -59,7 +59,7 @@ create table tb_endereco(
 );
 
 create table tb_telefone(
-    id_telefone int not null auto_increment,
+    id_telefone int not null,
     id_cliente int,
     id_empregado int,
     ddd int not null,
@@ -74,48 +74,48 @@ create table tb_medico(
 );
 
 create table tb_consulta(
-    id_consulta int not null auto_increment,
+    id_consulta int not null,
     crmv varchar(15) not null,
     id_pet int not null,
     preco numeric(9, 2) not null,
     dt_consulta date not null,
-    inicio time not null,
-    termino time not null,
+    inicio date not null,
+    termino date not null,
     primary key(id_consulta)
 );
 
 create table tb_procedimento(
-    id_procedimento int not null auto_increment,
+    id_procedimento int not null,
     id_pet int not null,
     id_servicos int not null,
     dt_procedimento date not null,
-    inicio time not null,
-    termino time not null,
+    inicio date not null,
+    termino date not null,
     primary key(id_procedimento)
 );
 
 create table tb_servicos(
-    id_servicos int not null auto_increment,
+    id_servicos int not null,
     tipo varchar(20) not null,
     preco numeric(9, 2) not null,
     primary key(id_servicos)
 );
 
 create table tb_especie(
-    id_especie int not null auto_increment,
+    id_especie int not null,
     nome varchar(30) not null,
     primary key(id_especie)
 );
 
 create table tb_raca(
-    id_raca int not null auto_increment,
+    id_raca int not null,
     id_especie int not null,
     nome varchar(30) not null,
     primary key(id_raca)
 );
 
 create table tb_pet(
-    id_pet int not null auto_increment,
+    id_pet int not null,
     id_cliente int not null,
     id_raca int not null,
     nome varchar(50) not null,
@@ -135,19 +135,19 @@ create table tb_medidas_animal(
 );
 
 create table tb_compra(
-    id_compra int not null auto_increment,
+    id_compra int not null,
     id_cliente int not null,
     id_empregado int not null,
-    dt_compra datetime not null,
+    dt_compra date not null,
     primary key(id_compra)
 );
 
 create table tb_lote(
-    id_lote int not null auto_increment,
+    id_lote int not null,
     id_produto int,
     id_medicamento int,
     id_fornecedor int not null,
-    dt_chegada datetime not null,
+    dt_chegada date not null,
     qtd_recebida int not null,
     validade date not null,
     valor_pago numeric(9, 2) not null,
@@ -155,7 +155,7 @@ create table tb_lote(
 );
 
 create table tb_lotecompra(
-    id_lotecompra int not null auto_increment,
+    id_lotecompra int not null,
     id_compra int not null,
     id_lote int not null,
     quantidade int not null,
@@ -163,7 +163,7 @@ create table tb_lotecompra(
 );
 
 create table tb_produto(
-    id_produto int not null auto_increment,
+    id_produto int not null,
     nome varchar(100) not null,
     estoque int not null,
     preco_venda numeric(9, 2) not null,
@@ -171,7 +171,7 @@ create table tb_produto(
 );
 
 create table tb_medicamento(
-    id_medicamento int not null auto_increment,
+    id_medicamento int not null,
     nome varchar(100) not null,
     estoque int not null,
     preco_venda numeric(9, 2) not null,
@@ -179,12 +179,72 @@ create table tb_medicamento(
 );
 
 create table tb_fornecedor(
-    id_fornecedor int not null auto_increment,
+    id_fornecedor int not null,
     nome varchar(100) not null,
     cnpj varchar(50) not null,
     primary key(id_fornecedor)
 );
 
+alter session set nls_date_format = 'DD-MM-AAAA HH24:MI:SS';
+
+-- RESTRICOES --
+
+alter table 
+    tb_cliente 
+add constraint ck_sexo_cliente check (sexo in ('M','F'));
+
+alter table 
+    tb_funcionario 
+add constraint ck_sexo_empregado check (sexo in ('M','F'));
+
+alter table 
+    tb_pet 
+add constraint ck_sexo_pet check (sexo in ('M','F'));
+
+
+-- CRIANDO AS SEQUENCIAS --
+
+create sequence sq_cliente;
+
+create sequence sq_empregado;
+
+create sequence sq_pais;
+
+create sequence sq_estado;
+
+create sequence sq_cidade;
+
+create sequence sq_logradouro;
+
+create sequence sq_endereco;
+
+create sequence sq_telefone;
+
+create sequence sq_consulta;
+
+create sequence sq_procedimento;
+
+create sequence sq_servicos;
+
+create sequence sq_especie;
+
+create sequence sq_raca;
+
+create sequence sq_pet;
+
+create sequence sq_compra;
+
+create sequence sq_lote;
+
+create sequence sq_lotecompra;
+
+create sequence sq_produto;
+
+create sequence sq_medicamento;
+
+create sequence sq_fornecedor;
+
+-- CRIANDO TODAS AS FOREIGN KEY --
 alter table
     tb_estado
 add
