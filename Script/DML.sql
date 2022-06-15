@@ -28,3 +28,10 @@ INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Atacadão Atakarejo', '73.849
 INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Lojas Amaricanas S.A', '33.014.556/0001-96');
 INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Pfizer', '46.070.868/0019-983');
 INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Johnson & Johnson', '54.516.661/0002-84');
+
+-- tb_medicamentos --
+INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Ácido acetilsalicílico ','140','10');
+INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Diclofenaco Cataflan','69','42');
+INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Paracetamol','140','5');
+INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Ibuprofeno ','120','6');
+INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Antipulgas e Carrapatos','150','187');
