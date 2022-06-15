@@ -4,7 +4,7 @@ create table tb_cliente(
     nome varchar(100) not null,
     dt_nascimento date not null,
     sexo char(01) not null,
-    email varchar(30) not null,
+    email varchar(90) not null,
     rg varchar(30) not null,
     primary key(id_cliente)
 );
@@ -183,24 +183,22 @@ create table tb_fornecedor(
     primary key(id_fornecedor)
 );
 
-alter session set nls_date_format = 'DD-MM-AAAA';
+alter session set nls_date_format = 'DD/MM/YYYY';
 
-alter session set nls_timestamp_format = 'DD-MM-AAAA HH24:MI:SS';
+alter session set nls_timestamp_format = 'DD/MM/AAAA HH24:MI:SS';
 
 -- RESTRICOES --
 
-/*
 alter table
     tb_telefone
-add constraint ck_id_cliente_telefone check (id_cliente in (null, int) || id_empregado in (int, null));
-*/
+add check (DDD < 100 and DDD > 0);
 
 alter table 
     tb_cliente 
 add constraint ck_sexo_cliente check (sexo in ('M','F'));
 
 alter table 
-    tb_funcionario 
+    tb_empregado 
 add constraint ck_sexo_empregado check (sexo in ('M','F'));
 
 alter table 
