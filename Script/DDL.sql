@@ -75,7 +75,7 @@ create table tb_medico(
 
 create table tb_consulta(
     id_consulta int not null,
-    crmv varchar(15) not null,
+    crmv int not null,
     id_pet int not null,
     preco numeric(9, 2) not null,
     dt_inicio timestamp not null,
