@@ -193,6 +193,16 @@ alter table
     tb_telefone 
 add constraint 
     CK_Tefefone check ((id_cliente is null and id_empregado is not null) or (id_cliente is not null and id_empregado is null));
+    
+alter table 
+    tb_endereco
+add constraint 
+    CK_Endereco check ((id_cliente is null and id_empregado is not null) or (id_cliente is not null and id_empregado is null));
+    
+alter table 
+    tb_lote 
+add constraint 
+    CK_Lote check ((id_produto is null and id_medicamento is not null) or (id_produto is not null and id_medicamento is null));
 
 alter table 
     tb_cliente 
