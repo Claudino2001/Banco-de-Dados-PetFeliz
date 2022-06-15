@@ -69,7 +69,6 @@ INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Rua Maranhão', 'On
 INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 2, 'Av. Fox', 'Laranjadas', 102);
 INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 2, 'Rua J', 'Pau Miudo', 7);
 
-
 -- TB_ENDERECO --
 INSERT INTO tb_endereco VALUES (sq_endereco.nextval, 1, null, 1,'Apt. 2');
 INSERT INTO tb_endereco VALUES (sq_endereco.nextval, 2, null, 2,'Casa A');
@@ -81,3 +80,20 @@ INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 3, 7, '3 Andar');
 INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 4, 8,'Apt. 1303');
 INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 5, 9,'Apt. 1401');
 INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 6, 10,'Lote X');
+
+-- TB_TELEFONE -- FALTA REVISAR
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 1, null, 71, 10000001);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 1, null, 71, 12121212);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 2, null, 31, 11111111);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 2, null, 31, 32232323);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 2, null, 31, 12111411);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 3, null, 71, 22222222);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, 4, null, 62, 33333333);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 1, 11, 12120007);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 1, 12, 10021008);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 2, 31, 20000032);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 3, 41, 30000003);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 4, 73, 40000004);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 5, 19, 19743213);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 6, 23, 97341863);
+INSERT INTO tb_telefone VALUES (sq_telefone.nextvalue, null, 6, 11, 98764563);
