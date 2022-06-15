@@ -45,6 +45,7 @@ create table tb_logradouro(
     id_logradouro int not null,
     id_cidade int not null,
     nome varchar(50) not null,
+    bairro varchar(50),
     numero int not null,
     primary key(id_logradouro)
 );
@@ -54,7 +55,7 @@ create table tb_endereco(
     id_cliente int,
     id_empregado int,
     id_logradouro int not null,
-    complemento varchar(100) not null,
+    complemento varchar(100),
     primary key(id_endereco)
 );
 

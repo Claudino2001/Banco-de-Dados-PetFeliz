@@ -44,3 +44,40 @@ INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Petisco', 41, 24.99);
 -- TB_MEDICO -- 
 INSERT INTO tb_medico VALUES (51924, 1);
 INSERT INTO tb_medico VALUES (12247, 3);
+
+
+
+-- TB_PAIS --
+INSERT INTO tb_pais VALUES (sq_pais.nextval, 'Brasil');
+
+-- TB_ESTADO --
+INSERT INTO tb_estado VALUES (sq_estado.nextval, 1,'Bahia');
+
+-- TB_CIDADE --
+INSERT INTO tb_cidade VALUES (sq_cidade.nextval, 1,'Salvador');	
+INSERT INTO tb_cidade VALUES (sq_cidade.nextval, 1,'Lauro de Freitas');
+
+-- TB_LOGRADOURO --
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Rua Pará', 'Pituba', 10);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Rua Gabriel', 'Barra', 23);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Rua Artivis', 'Armação', 10);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Av. 7', 'Armação', 7);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 2, 'Rua Praia de Itapema', 'Vilas do Atlântico', 67);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 2, 'Rua Ministro ACM', 'Buraquinho', 1034);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Praia da Paciência', 'Rio Vermelho', 12);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 1, 'Rua Maranhão', 'Ondina', 4);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 2, 'Av. Fox', 'Laranjadas', 102);
+INSERT INTO tb_logradouro VALUES (sq_logradouro.nextval, 2, 'Rua J', 'Pau Miudo', 7);
+
+
+-- TB_ENDERECO --
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, 1, null, 1,'Apt. 2');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, 2, null, 2,'Casa A');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, 3, null, 3);
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, 4, null, 4,'Lote 3');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 1, 5,'Casa Z');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 2, 6,'Apt. 123');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 3, 7, '3 Andar');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 4, 8,'Apt. 1303');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 5, 9,'Apt. 1401');
+INSERT INTO tb_endereco VALUES (sq_endereco.nextval, null, 6, 10,'Lote X');
