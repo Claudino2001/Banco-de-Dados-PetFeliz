@@ -18,6 +18,7 @@ create table tb_empregado(
     email varchar(30) not null,
     rg varchar(30) not null,
     dt_admissao date not null,
+    cargo varchar(15) not null,
     primary key(id_empregado)
 );
 
