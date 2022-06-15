@@ -78,9 +78,8 @@ create table tb_consulta(
     crmv varchar(15) not null,
     id_pet int not null,
     preco numeric(9, 2) not null,
-    dt_consulta date not null,
-    inicio date not null,
-    termino date not null,
+    dt_inicio timestamp not null,
+    dt_termino timestamp not null,
     primary key(id_consulta)
 );
 
@@ -88,9 +87,8 @@ create table tb_procedimento(
     id_procedimento int not null,
     id_pet int not null,
     id_servicos int not null,
-    dt_procedimento date not null,
-    inicio date not null,
-    termino date not null,
+    dt_inicio timestamp not null,
+    dt_termino timestamp not null,
     primary key(id_procedimento)
 );
 
@@ -138,7 +136,7 @@ create table tb_compra(
     id_compra int not null,
     id_cliente int not null,
     id_empregado int not null,
-    dt_compra date not null,
+    dt_compra timestamp not null,
     primary key(id_compra)
 );
 
@@ -147,7 +145,7 @@ create table tb_lote(
     id_produto int,
     id_medicamento int,
     id_fornecedor int not null,
-    dt_chegada date not null,
+    dt_chegada timestamp not null,
     qtd_recebida int not null,
     validade date not null,
     valor_pago numeric(9, 2) not null,
@@ -185,9 +183,17 @@ create table tb_fornecedor(
     primary key(id_fornecedor)
 );
 
-alter session set nls_date_format = 'DD-MM-AAAA HH24:MI:SS';
+alter session set nls_date_format = 'DD-MM-AAAA';
+
+alter session set nls_timestamp_format = 'DD-MM-AAAA HH24:MI:SS';
 
 -- RESTRICOES --
+
+/*
+alter table
+    tb_telefone
+add constraint ck_id_cliente_telefone check (id_cliente in (null, int) || id_empregado in (int, null));
+*/
 
 alter table 
     tb_cliente 
