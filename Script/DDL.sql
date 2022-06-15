@@ -68,7 +68,7 @@ create table tb_telefone(
 );
 
 create table tb_medico(
-    crmv varchar(15) not null,
+    crmv int not null,
     id_empregado int not null,
     primary key(crmv)
 );
