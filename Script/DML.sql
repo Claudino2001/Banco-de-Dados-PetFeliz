@@ -28,4 +28,3 @@ INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Atacadão Atakarejo', '73.849
 INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Lojas Amaricanas S.A', '33.014.556/0001-96');
 INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Pfizer', '46.070.868/0019-983');
 INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Johnson & Johnson', '54.516.661/0002-84');
-
