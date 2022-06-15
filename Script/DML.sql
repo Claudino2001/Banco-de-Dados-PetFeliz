@@ -23,15 +23,22 @@ INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '234.694.920-72', 'Robert
 
 -- TB_FORNECEDOR --
 
-INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Amazon', '15.436.940/0001-03');
-INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Atacadão Atakarejo', '73.849.952/0001-58');
-INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Lojas Amaricanas S.A', '33.014.556/0001-96');
-INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Pfizer', '46.070.868/0019-983');
-INSERT INTO tb_fornecedor (sq_fornecedor.nextval, 'Johnson & Johnson', '54.516.661/0002-84');
+INSERT INTO tb_fornecedor VALUES(sq_fornecedor.nextval, 'Amazon', '15.436.940/0001-03');
+INSERT INTO tb_fornecedor VALUES(sq_fornecedor.nextval, 'Atacadão Atakarejo', '73.849.952/0001-58');
+INSERT INTO tb_fornecedor VALUES(sq_fornecedor.nextval, 'Lojas Amaricanas S.A', '33.014.556/0001-96');
+INSERT INTO tb_fornecedor VALUES(sq_fornecedor.nextval, 'Pfizer', '46.070.868/0019-983');
+INSERT INTO tb_fornecedor VALUES(sq_fornecedor.nextval, 'Johnson & Johnson', '54.516.661/0002-84');
 
 -- tb_medicamentos --
-INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Ácido acetilsalicílico ','140','10');
-INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Diclofenaco Cataflan','69','42');
-INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Paracetamol','140','5');
-INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Ibuprofeno ','120','6');
-INSERT INTO tb_medicamentos (sq_medicamento.nextval, 'Antipulgas e Carrapatos','150','187');
+INSERT INTO tb_medicamento VALUES(sq_medicamento.nextval, 'Ácido acetilsalicílico ','140','10');
+INSERT INTO tb_medicamento VALUES(sq_medicamento.nextval, 'Diclofenaco Cataflan','69','42');
+INSERT INTO tb_medicamento VALUES(sq_medicamento.nextval, 'Paracetamol','140','5');
+INSERT INTO tb_medicamento VALUES(sq_medicamento.nextval, 'Ibuprofeno ','120','6');
+INSERT INTO tb_medicamento VALUES(sq_medicamento.nextval, 'Antipulgas e Carrapatos','150','187');
+--tb_produto--
+INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Caixa de Areia', 25, 60.0);
+INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Ração Premium', 40, 115.50);
+INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Coleira Grande', 32, 54.90);
+INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Bebedouro Automático', 20, 140.0);
+INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Bola', 27, 18.90);
+INSERT INTO tb_produto VALUES (sq_produto.nextval, 'Petisco', 41, 24.99);
