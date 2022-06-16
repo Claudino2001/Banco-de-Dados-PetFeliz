@@ -126,12 +126,13 @@ create table tb_pet(
 );
 
 create table tb_medidas_animal(
+    id_medidas int not null,
     id_pet int not null,
     dt_medida date not null,
     peso float not null,
     altura float not null,
     comprimento float not null,
-    primary key(id_pet)
+    primary key(id_medidas)
 );
 
 create table tb_compra(
@@ -224,6 +225,8 @@ add constraint ck_sexo_pet check (sexo in ('M','F'));
 
 
 -- CRIANDO AS SEQUENCIAS --
+
+create sequence sq_medidas;
 
 create sequence sq_cliente;
 
@@ -410,8 +413,8 @@ alter table
     tb_cliente
 add
     constraint cliente_unique2 unique (rg);
-    
+
 alter table
-    tb_medico
-add 
-    constraint medico_unique unique (crmv);
+    tb_fornecedor
+add
+    constraint fornecedor_unique unique (cnpj);
