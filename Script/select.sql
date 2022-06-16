@@ -30,8 +30,10 @@ select cliente.nome, count(compra.id_compra)as compras_feitas from tb_cliente cl
 -- que ele está vinculado e o valor pago por ele e sua validade.
 
 select tb_produto.nome, tb_lotecompra.id_lotecompra, tb_compra.dt_compra, tb_cliente.nome, tb_produto.preco_venda, tb_lote.validade from tb_produto
-    join tb_lote on (produto.id_produto = lote.id_produto)
-    join tb_lotecompra on (tb_lotecompra.id_lote = lote.id_lote)
-    join compra on (tb_lotecompra.id_compra = compra.id_compra)
-    join cliente on (tb_cliente.id_cliente = tb_compra.id_cliente)
+    join tb_lote on (tb_produto.id_produto = tb_lote.id_produto)
+    join tb_lotecompra on (tb_lotecompra.id_lote = tb_lote.id_lote)
+    join tb_compra on (tb_lotecompra.id_compra = tb_compra.id_compra)
+    join tb_cliente on (tb_cliente.id_cliente = tb_compra.id_cliente)
         where tb_compra.dt_compra = 'XX/YY/ZZZZ' and tb_cliente.nome = 'Claudinho'
+        
+        
