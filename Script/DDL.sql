@@ -385,3 +385,15 @@ alter table
     tb_lotecompra
 add
     constraint fk_lotecompra_lote foreign key (id_lote) references tb_lote (id_lote);
+alter table
+    tb_empregado
+add
+    constraint empregado_unique unique (cpf, rg, email);
+alter table
+    tb_cliente
+add
+    constraint cliente_unique (cpf, rg); -- nao sei se coloca email tambem...--
+alter table
+    tb_medico
+add 
+    constraint medico_unique (crmv);
