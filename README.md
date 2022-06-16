@@ -16,8 +16,8 @@ registrar os procedimentos realizados pelos veterinários e também armazenar as
 produtos que são comercializados.
 
 ## ENVOLVIDOS
-- Arthur Sant’Anna de Carvalho Santos
-- Enzo Bacelar Conte Gebauer
-- Gabriel de Araujo Claudino
-- Gabriel Souza Dunkel
-- Giulia de Jesus Franca
+* Arthur Sant’Anna de Carvalho Santos [Perfil GitHub](https://github.com/Arthur-SantAnna)
+* Enzo Bacelar Conte Gebauer [Perfil GitHub](https://github.com/enzogebauer)
+* Gabriel de Araujo Claudino [Perfil GitHub](https://github.com/Claudino2001)
+* Gabriel Souza Dunkel [Perfil GitHub](https://github.com/gabrielsdunkel)
+* Giulia de Jesus Franca [Perfil GitHub](https://github.com/giuliafranca)
