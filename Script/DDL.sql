@@ -15,37 +15,37 @@ create table tb_empregado(
     nome varchar(100) not null,
     dt_nascimento date not null,
     sexo char(01) not null,
-    email varchar(30) not null,
+    email varchar(100) not null,
     rg varchar(30) not null,
     dt_admissao date not null,
-    cargo varchar(15) not null,
+    cargo varchar(30) not null,
     primary key(id_empregado)
 );
 
 create table tb_pais(
     id_pais int not null,
-    nome varchar(50) not null,
+    pais varchar(50) not null,
     primary key(id_pais)
 );
 
 create table tb_estado(
     id_estado int not null,
     id_pais int not null,
-    nome varchar(50) not null,
+    estado varchar(50) not null,
     primary key(id_estado)
 );
 
 create table tb_cidade(
     id_cidade int not null,
     id_estado int not null,
-    nome varchar(50) not null,
+    cidade varchar(50) not null,
     primary key(id_cidade)
 );
 
 create table tb_logradouro(
     id_logradouro int not null,
     id_cidade int not null,
-    nome varchar(50) not null,
+    logradouro varchar(50) not null,
     bairro varchar(50),
     numero int not null,
     primary key(id_logradouro)
@@ -129,9 +129,9 @@ create table tb_medidas_animal(
     id_medidas int not null,
     id_pet int not null,
     dt_medida date not null,
-    peso float not null,
-    altura float not null,
-    comprimento float not null,
+    peso_kg float not null,
+    altura_cm float not null,
+    comprimento_cm float not null,
     primary key(id_medidas)
 );
 
@@ -159,7 +159,7 @@ create table tb_lotecompra(
     id_lotecompra int not null,
     id_compra int not null,
     id_lote int not null,
-    quantidade int not null,
+    unidades int not null,
     primary key(id_lotecompra)
 );
 

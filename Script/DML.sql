@@ -1,11 +1,5 @@
 -- INSERINDO VALORES --
 
-/*
-ADD NA DOCUMENTAÇÃO O CONCEITO DE SRD
-INSERT INTO table_name
-VALUES (value1, value2, value3, ...);
-*/
-
 -- TB_ CLIENTE --
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '911.880.973-18', 'Rebeca Aline', '08/06/1998', 'F', 'rebeca_viana@valedesign.com.br', '43.920.175-5');
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '993.936.888-77', 'Luiza Baptista', '14/06/1945', 'F', 'luiza_joana@vivo.com.br', '429.032.711-8');
