@@ -392,8 +392,8 @@ add
 alter table
     tb_cliente
 add
-    constraint cliente_unique (cpf, rg); -- nao sei se coloca email tambem...--
+    constraint cliente_unique unique (cpf, rg); -- nao sei se coloca email tambem...--
 alter table
     tb_medico
 add 
-    constraint medico_unique (crmv);
+    constraint medico_unique unique (crmv);
