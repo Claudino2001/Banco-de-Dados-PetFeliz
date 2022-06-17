@@ -7,14 +7,20 @@
 
 select count(compra.ID_COMPRA) as quantidade_total_compras from tb_compra compra where compra.DT_COMPRA > '15/03/2022 00:00:00';
         
-select cliente.nome, count(compra.id_compra)as compras_feitas from tb_cliente cliente 
+select cliente.nome, count(compra.id_compra) as compras_feitas, sum(produto.preco_venda) as valor_gasto_total from tb_cliente cliente 
     join tb_compra compra on compra.id_cliente = cliente.id_cliente
     join tb_lotecompra lotecompra on compra.id_compra = lotecompra.id_compra
     join tb_lote lote on lote.id_lote = lotecompra.id_lote
-    
+    join tb_produto produto on lote.id_produto = produto.id_produto
         group by cliente.nome
             having count(compra.id_compra) > 3;
-
+        
+select cliente.nome, produto.nome, produto.preco_venda from tb_cliente cliente 
+    join tb_compra compra on compra.id_cliente = cliente.id_cliente
+    join tb_lotecompra lotecompra on compra.id_compra = lotecompra.id_compra
+    join tb_lote lote on lote.id_lote = lotecompra.id_lote
+    join tb_produto produto on lote.id_produto = produto.id_produto
+        
 
 
 -- SEGUNDO SELECT
