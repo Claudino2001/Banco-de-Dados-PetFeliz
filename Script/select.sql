@@ -18,10 +18,20 @@ select cliente.nome, count(compra.id_compra)as compras_feitas from tb_cliente cl
 
 
 -- SEGUNDO SELECT
--- A partir de certo medicamento prescrito, dizer qual foi a quantidade prescrita, para quais cachorros
--- foram prescritos esses medicamentos, quem são donos desses cachorros e que médico
+-- A partir de certo medicamento prescrito, dizer qual foi a quantidade prescrita para quais animais
+-- foram prescritos esses medicamentos, quem são donos deles e que médico
 -- prescreveu os medicamentos.
 
+select tb_medicamento.nome, tb_lotecompra.unidades, tb_pet.nome, tb_cliente.nome as cliente, tb_empregado.nome as medico from tb_medicamento
+    join tb_lote on (tb_medicamento.id_medicamento = tb_lote.id_medicamento)
+    join tb_lotecompra on (tb_lotecompra.id_lote = tb_lote.id_lote)
+    join tb_compra on (tb_lotecompra.id_compra = tb_compra.id_compra)
+    join tb_cliente on (tb_cliente.id_cliente = tb_compra.id_cliente)
+    join tb_pet on (tb_pet.id_cliente = tb_cliente.id_cliente)
+    join tb_empregado on (tb_compra.id_empregado = tb_empregado.id_empregado)
+    join tb_medico on (tb_medico.id_empregado = tb_empregado.id_empregado)
+        where tb_medicamento.nome = 'Ácido acetilsalicílico '
+   
 
 
 
