@@ -179,7 +179,6 @@ INSERT INTO tb_lote VALUES (sq_lote.nextval, NULL, 3, 5, '19/06/2021 05:27:45', 
 
 -- TB_LOTECOMPRA -- 
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 1, 3, 1);
-INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 2, 1, 1);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 3, 1, 3);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 4, 4, 1);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 5, 6, 2);
