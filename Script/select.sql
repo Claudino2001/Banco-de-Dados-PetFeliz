@@ -15,13 +15,19 @@ select cliente.nome, count(compra.id_compra) as compras_feitas, sum(produto.prec
         group by cliente.nome
             having count(compra.id_compra) > 3;
         
-select distinct(select cliente.nome from tb_cliente cliente join tb_compra compra on compra.id_cliente = cliente.id_cliente join tb_lotecompra lotecompra on compra.id_compra = lotecompra.id_compra join tb_lote lote on lote.id_lote = lotecompra.id_lote join tb_produto produto on lote.id_produto = produto.id_produto group by cliente.nome having count(compra.id_compra) > 3) as cliente_nome, produto.nome, produto.preco_venda from tb_cliente cliente 
+select cliente.nome, produto.nome, produto.preco_venda from tb_cliente cliente 
     join tb_compra compra on compra.id_cliente = cliente.id_cliente
     join tb_lotecompra lotecompra on compra.id_compra = lotecompra.id_compra
     join tb_lote lote on lote.id_lote = lotecompra.id_lote
-    join tb_produto produto on lote.id_produto = produto.id_produto;
+    join tb_produto produto on lote.id_produto = produto.id_produto
+        where cliente.nome = (select distinct(cliente.nome) from tb_cliente cliente
+                                join tb_compra compra on compra.id_cliente = cliente.id_cliente 
+                                join tb_lotecompra lotecompra on compra.id_compra = lotecompra.id_compra 
+                                join tb_lote lote on lote.id_lote = lotecompra.id_lote 
+                                join tb_produto produto on lote.id_produto = produto.id_produto 
+                                    group by cliente.nome
+                                        having count(compra.id_compra) > 3 );
 
-        
 
 
 -- SEGUNDO SELECT
