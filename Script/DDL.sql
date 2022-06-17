@@ -103,14 +103,14 @@ create table tb_servicos(
 
 create table tb_especie(
     id_especie int not null,
-    nome varchar(30) not null,
+    especie varchar(30) not null,
     primary key(id_especie)
 );
 
 create table tb_raca(
     id_raca int not null,
     id_especie int not null,
-    nome varchar(30) not null,
+    raca varchar(30) not null,
     primary key(id_raca)
 );
 
@@ -165,7 +165,7 @@ create table tb_lotecompra(
 
 create table tb_produto(
     id_produto int not null,
-    nome varchar(100) not null,
+    produto varchar(100) not null,
     estoque int not null,
     preco_venda numeric(9, 2) not null,
     primary key(id_produto)
@@ -173,7 +173,7 @@ create table tb_produto(
 
 create table tb_medicamento(
     id_medicamento int not null,
-    nome varchar(100) not null,
+    medicamento varchar(100) not null,
     estoque int not null,
     preco_venda numeric(9, 2) not null,
     primary key(id_medicamento)
@@ -181,7 +181,7 @@ create table tb_medicamento(
 
 create table tb_fornecedor(
     id_fornecedor int not null,
-    nome varchar(100) not null,
+    fornecedor varchar(100) not null,
     cnpj varchar(50) not null,
     primary key(id_fornecedor)
 );
