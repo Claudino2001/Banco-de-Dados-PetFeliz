@@ -109,7 +109,7 @@ INSERT INTO tb_raca VALUES (sq_raca.nextval, 1, 'SRD');
 INSERT INTO tb_raca VALUES (sq_raca.nextval, 2, 'SRD');
 
 -- TB_PET -- TOTAL: [5]
-INSERT INTO tb_pet VALUES (sq_pet.nextval, 1, 1, 'Alfredo', 'M', '10/05/2019', 'A-'); 
+INSERT INTO tb_pet VALUES (sq_pet.nextval, 1, 1, 'Batatona', 'F', '10/05/2019', 'A-'); 
 INSERT INTO tb_pet VALUES (sq_pet.nextval, 1, 7, 'Breu', 'M', '01/01/2020', 'B+');
 INSERT INTO tb_pet VALUES (sq_pet.nextval, 2, 5, 'Danka', 'F', '17/02/2012', 'O+');
 INSERT INTO tb_pet VALUES (sq_pet.nextval, 3, 9, 'Emerson', 'M', '01/05/2018', 'A+');
@@ -186,3 +186,5 @@ INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 5, 6, 2);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 6, 5, 1);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 7, 2, 1);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 8, 5, 1);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 12, 9, 5);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 13, 7, 3);

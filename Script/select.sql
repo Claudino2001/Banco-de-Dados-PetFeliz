@@ -18,8 +18,8 @@ select cliente.nome, count(compra.id_compra)as compras_feitas from tb_cliente cl
 
 
 -- SEGUNDO SELECT
--- Que medicamentos foram prescritos, qual foi a quantidade prescrita, para quais cachorros
--- foram prescritos esses medicamentos, que são donos desses cachorros e que médico
+-- A partir de certo medicamento prescrito, dizer qual foi a quantidade prescrita, para quais cachorros
+-- foram prescritos esses medicamentos, quem são donos desses cachorros e que médico
 -- prescreveu os medicamentos.
 
 
@@ -29,11 +29,10 @@ select cliente.nome, count(compra.id_compra)as compras_feitas from tb_cliente cl
 -- Identificar um determinado produto comprado em um determinado dia pelo Cliente X, o lote
 -- que ele está vinculado e o valor pago por ele e sua validade.
 
-select tb_produto.nome, tb_lotecompra.id_lotecompra, tb_compra.dt_compra, tb_cliente.nome, tb_produto.preco_venda, tb_lote.validade from tb_produto
+select tb_cliente.nome, tb_produto.nome, tb_produto.preco_venda, tb_compra.dt_compra, tb_lotecompra.id_lotecompra, tb_lote.validade from tb_produto
     join tb_lote on (tb_produto.id_produto = tb_lote.id_produto)
     join tb_lotecompra on (tb_lotecompra.id_lote = tb_lote.id_lote)
     join tb_compra on (tb_lotecompra.id_compra = tb_compra.id_compra)
     join tb_cliente on (tb_cliente.id_cliente = tb_compra.id_cliente)
-        where tb_compra.dt_compra = 'XX/YY/ZZZZ' and tb_cliente.nome = 'Claudinho'
-        
+        where tb_compra.dt_compra = '16/05/2022 17:37:05' and tb_cliente.nome = 'Luiza Baptista' 
         
