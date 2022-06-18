@@ -43,7 +43,7 @@ group by
     tb_cliente.nome, tb_pet.nome;
     
 -- PARA SERVIÇOS E CONSULTAS --
-select tb_cliente.nome, tb_pet.nome, sum(tb_consulta.preco+ tb_servicos.preco) as total_serviço_consulta_R$ from tb_consulta 
+select tb_cliente.nome as cliente, tb_pet.nome as pet, sum(tb_consulta.preco+ tb_servicos.preco) as total_serviço_consulta_R$ from tb_consulta 
         join tb_pet on (tb_consulta.id_pet = tb_pet.id_pet) 
         join tb_cliente on (tb_pet.id_cliente = tb_cliente.id_cliente)
         join tb_procedimento on (tb_procedimento.id_pet = tb_pet.id_pet)
