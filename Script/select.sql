@@ -15,4 +15,23 @@ select tb_produto.produto, tb_compra.dt_compra from tb_produto
                     where tb_compra.dt_compra between '11/04/2022 12:00:00' and '16/05/2022 12:00:00'
                     )
 order by tb_produto.produto;
-        
+-------------------------------------------------------------------------------------------------------
+-- SEGUNDO SELECT --
+-- apresentar o total de valor gasto por cliente e pet ao Longo de um determinado intervalo de tempo, 
+-- ordenado pelo nome do cliente e nome do pet
+
+-------------------------------------------------------------------------------------------------------
+-- tentativa da 3 - ta com duas consultas entao ta meio erradao --
+select tb_empregado.nome, sum(tb_consulta.preco) as primeiro_sem from tb_consulta
+    join tb_medico on (tb_consulta.crmv = tb_medico.crmv)
+    join tb_empregado on(tb_medico.id_empregado = tb_empregado.id_empregado)
+where tb_consulta.dt_termino between '01/01/2022 00:00:01' and '01/06/2022 23:59:59'
+group by
+    tb_empregado.nome, tb_medico.crmv
+join select tb_empregado.nome, sum(tb_consulta.preco) as segundo_sem from tb_consulta
+    join tb_medico on (tb_consulta.crmv = tb_medico.crmv)
+    join tb_empregado on(tb_medico.id_empregado = tb_empregado.id_empregado)
+where tb_consulta.dt_termino between '01/06/2022 12:00:00' and '31/12/2022 12:00:00'
+group by
+    tb_empregado.nome, tb_medico.crmv;
+---------------------------------------------------------------------------------------
