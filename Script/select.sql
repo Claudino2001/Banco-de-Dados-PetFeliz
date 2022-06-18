@@ -87,7 +87,7 @@ select tb_cliente.nome, tb_pet.nome, sum(tb_consulta.preco+ tb_servicos.preco+tb
 -- apresentar para cada médico , os valores recebidos nas consultas/procedimentos ao longo de determinado ano --
 
 -- GANHOS NO PRIMEIRO SEMESTRE --
-select tb_empregado.nome, sum(tb_consulta.preco) as primeiro_sem_$ from tb_consulta
+select tb_empregado.nome, sum(tb_consulta.preco) as primeiro_sem_R$ from tb_consulta
     join tb_medico on (tb_consulta.crmv = tb_medico.crmv)
     join tb_empregado on(tb_medico.id_empregado = tb_empregado.id_empregado)
 where tb_consulta.dt_termino between '01/01/2022 00:00:00' and '30/06/2022 23:59:59'
@@ -95,7 +95,7 @@ group by
     tb_empregado.nome, tb_medico.crmv;
 
 -- GANHOS NO SEGUNDO SEMESTRE --
-select tb_empregado.nome, sum(tb_consulta.preco) as segundo_sem_$ from tb_consulta
+select tb_empregado.nome, sum(tb_consulta.preco) as segundo_sem_R$ from tb_consulta
     join tb_medico on (tb_consulta.crmv = tb_medico.crmv)
     join tb_empregado on(tb_medico.id_empregado = tb_empregado.id_empregado)
 where tb_consulta.dt_termino between '01/07/2022 00:00:00' and '31/12/2022 23:59:59'
