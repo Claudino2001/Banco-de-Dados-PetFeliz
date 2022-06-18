@@ -20,6 +20,27 @@ order by tb_produto.produto;
 -- apresentar o total de valor gasto por cliente e pet ao Longo de um determinado intervalo de tempo, 
 -- ordenado pelo nome do cliente e nome do pet
 
+-- PARA PRODUTOS --
+select tb_cliente.nome as cliente, tb_pet.nome as pet, sum(tb_produto.preco_venda*tb_lotecompra.unidades) as total_produtos_R$ from tb_pet
+        join tb_cliente on(tb_cliente.id_cliente = tb_pet.id_cliente)
+        join tb_compra on(tb_cliente.id_cliente = tb_compra.id_cliente)
+        join tb_lotecompra on(tb_compra.id_compra = tb_lotecompra.id_compra)
+        join tb_lote on(tb_lotecompra.id_lote = tb_lote.id_lote)
+        join tb_produto on(tb_lote.id_produto = tb_produto.id_produto)
+        where tb_compra.dt_compra between '01/01/2022 12:00:00' and '30/06/2022 12:00:00'
+group by 
+    tb_cliente.nome, tb_pet.nome;
+    
+-- PARA MEDICAMENTOS --
+select tb_cliente.nome as cliente, tb_pet.nome as pet, sum(tb_medicamento.preco_venda*tb_lotecompra.unidades) as total_medicamentos_R$ from tb_pet
+        join tb_cliente on(tb_cliente.id_cliente = tb_pet.id_cliente)
+        join tb_compra on(tb_cliente.id_cliente = tb_compra.id_cliente)
+        join tb_lotecompra on(tb_compra.id_compra = tb_lotecompra.id_compra)
+        join tb_lote on(tb_lotecompra.id_lote = tb_lote.id_lote)
+        join tb_medicamento on(tb_lote.id_medicamento = tb_medicamento.id_medicamento)
+        where tb_compra.dt_compra between '01/01/2022 12:00:00' and '30/06/2022 12:00:00'
+group by 
+    tb_cliente.nome, tb_pet.nome;
 -------------------------------------------------------------------------------------------------------
 -- tentativa da 3 - ta com duas consultas entao ta meio erradao --
 select tb_empregado.nome, sum(tb_consulta.preco) as primeiro_sem from tb_consulta
