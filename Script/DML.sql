@@ -5,23 +5,22 @@ INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '911.880.973-18', 'Rebeca Ali
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '993.936.888-77', 'Luiza Baptista', '14/06/1945', 'F', 'luiza_joana@vivo.com.br', '429.032.711-8');
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '752.287.170-05', 'Tim Maia', '01/02/1963', 'M', 'francisco@dye.com.br', '21.202.611-2');
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '983.311.522-55', 'Elias Rosa', '19/02/1964', 'M', 'elias@solution.com.br', '43.073.852-3');
-
-INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '123.987.522-87', 'Peter Parker', '04/05/2002', 'M', 'peter@solution.com.br', '01.073.852-3');
-INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '321.876.522-09', 'Steve Rogers', '04/07/1918', 'M', 'cap@solution.com.br', '43.021.852-3');
-INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '231.654.522-12', 'Bruce Banner', '19/02/1970', 'M', 'hulk@solution.com.br', '43.033.852-3');
-INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '234.543.522-55', 'Cavaleiro das Trevas', '19/02/1992', 'M', 'bat@solution.com.br', '93.073.852-3');
-INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '432.311.876-54', 'Robert Pattinson', '19/02/1977', 'M', 'robert@solution.com.br', '43.073.402-3');
-INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '543.543.522-76', 'Wolverine', '25/06/1914', 'M', 'logan@solution.com.br', '43.073.852-2');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '123.987.522-87', 'Peter Parker', '04/05/2002', 'M', 'peter@park.com.br', '01.073.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '321.876.522-09', 'Steve Rogers', '04/07/1918', 'M', 'cap@avengers.com.br', '43.021.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '231.654.522-12', 'Bruce Banner', '19/02/1970', 'M', 'hulk@verdao.com.br', '43.033.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '234.543.522-55', 'Cavaleiro das Trevas', '19/02/1992', 'M', 'bat@justice.com.br', '93.073.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '432.311.876-54', 'Robert Pattinson', '19/02/1977', 'M', 'robert@crepusculo.com.br', '43.073.402-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '543.543.522-76', 'Wolverine', '25/06/1914', 'M', 'logan@xmen.com.br', '43.073.852-2');
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '345.654.522-87', 'Will Smith', '19/02/1978', 'M', 'im.will@solution.com.br', '43.073.852-1');
 
 -- TB_ EMPREGADO --
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '406.511.938-34', 'Bianca Rosa', '23/02/1965', 'F', 'bianca_rosa_assis@ssala.com.br', '49.319.934-2', '12/03/1975', 'Médico');
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '222.444.555-01', 'Silvio Santos', '10/09/1800', 'M', 'santinho@sbt.com.br', '92.422.345-9', '01/09/2002', 'Caixa');
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '290-876-921-01', 'Francisco Araujo', '23/02/1965', 'M', 'chicozin@ssala.com.br', '42.193.934-6', '21/05/2001', 'Médico');
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '519.920.221-94', 'Mariah Bernardes', '18/03/1981', 'F', 'mariah@julianacaran.com.br', '36.529.019-1', '25/04/2013', 'Atendente');
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '480.899.460-70', 'Renan Nogueira', '01/01/1953', 'M', 'renan_b@inepar.com.br', '41.498.526-6', '31/03/1998', 'Gerente');
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '234.694.920-72', 'Roberto Carlos', '10/09/1953', 'M', 'betinho@globo.com.br', '12.422.556-9', '01/09/2001', 'Vendedor');
-INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '296.543.760-94', 'Tony Stark', '29/05/1970', 'M', 'tony@stark.com', '56.431.987-9', '01/09/2001', 'Caixa');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '406.511.938-34', 'Bianca Rosa', '23/02/1965', 'F', 'bianca_rosa_assis@petfeliz.com.br', '49.319.934-2', '12/03/1975', 'Médico');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '222.444.555-01', 'Silvio Santos', '10/09/1800', 'M', 'santinho@petfeliz.com.br', '92.422.345-9', '01/09/2002', 'Vendedor');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '290-876-921-01', 'Francisco Araujo', '23/02/1965', 'M', 'chicozin@petfeliz.com.br', '42.193.934-6', '21/05/2001', 'Médico');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '519.920.221-94', 'Mariah Bernardes', '18/03/1981', 'F', 'mariah@petfeliz.com.br', '36.529.019-1', '25/04/2013', 'Atendente');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '480.899.460-70', 'Renan Nogueira', '01/01/1953', 'M', 'renan_b@petfeliz.com.br', '41.498.526-6', '31/03/1998', 'Gerente');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '234.694.920-72', 'Roberto Carlos', '10/09/1953', 'M', 'betinho@petfeliz.com.br', '12.422.556-9', '01/09/2001', 'Vendedor');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '296.543.760-94', 'Tony Stark', '29/05/1970', 'M', 'tony@petfeliz.com.br', '56.431.987-9', '01/09/2001', 'Caixa');
 
 -- TB_FORNECEDOR --
 INSERT INTO tb_fornecedor VALUES (sq_fornecedor.nextval, 'Amazon', '15.436.940/0001-03');
@@ -212,3 +211,10 @@ INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 7, 2, 1);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 8, 5, 1);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 12, 9, 5);
 INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 13, 7, 3);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 15, 8, 3);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 11, 4, 2);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 9, 3, 3);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 2, 1, 1);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 10, 7, 2);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 14, 5, 1);
+INSERT INTO tb_lotecompra VALUES (sq_lotecompra.nextval, 16, 2, 2);
