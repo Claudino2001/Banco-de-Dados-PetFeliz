@@ -6,6 +6,14 @@ INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '993.936.888-77', 'Luiza Bapt
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '752.287.170-05', 'Tim Maia', '01/02/1963', 'M', 'francisco@dye.com.br', '21.202.611-2');
 INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '983.311.522-55', 'Elias Rosa', '19/02/1964', 'M', 'elias@solution.com.br', '43.073.852-3');
 
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '123.987.522-87', 'Peter Parker', '04/05/2002', 'M', 'peter@solution.com.br', '01.073.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '321.876.522-09', 'Steve Rogers', '04/07/1918', 'M', 'cap@solution.com.br', '43.021.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '231.654.522-12', 'Bruce Banner', '19/02/1970', 'M', 'hulk@solution.com.br', '43.033.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '234.543.522-55', 'Cavaleiro das Trevas', '19/02/1992', 'M', 'bat@solution.com.br', '93.073.852-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '432.311.876-54', 'Robert Pattinson', '19/02/1977', 'M', 'robert@solution.com.br', '43.073.402-3');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '543.543.522-76', 'Wolverine', '25/06/1914', 'M', 'logan@solution.com.br', '43.073.852-2');
+INSERT INTO tb_cliente VALUES (sq_cliente.nextval, '345.654.522-87', 'Will Smith', '19/02/1978', 'M', 'im.will@solution.com.br', '43.073.852-1');
+
 -- TB_ EMPREGADO --
 INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '406.511.938-34', 'Bianca Rosa', '23/02/1965', 'F', 'bianca_rosa_assis@ssala.com.br', '49.319.934-2', '12/03/1975', 'Médico');
 INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '222.444.555-01', 'Silvio Santos', '10/09/1800', 'M', 'santinho@sbt.com.br', '92.422.345-9', '01/09/2002', 'Caixa');
@@ -13,6 +21,7 @@ INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '290-876-921-01', 'Franci
 INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '519.920.221-94', 'Mariah Bernardes', '18/03/1981', 'F', 'mariah@julianacaran.com.br', '36.529.019-1', '25/04/2013', 'Atendente');
 INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '480.899.460-70', 'Renan Nogueira', '01/01/1953', 'M', 'renan_b@inepar.com.br', '41.498.526-6', '31/03/1998', 'Gerente');
 INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '234.694.920-72', 'Roberto Carlos', '10/09/1953', 'M', 'betinho@globo.com.br', '12.422.556-9', '01/09/2001', 'Vendedor');
+INSERT INTO tb_empregado VALUES (sq_empregado.nextval, '296.543.760-94', 'Tony Stark', '29/05/1970', 'M', 'tony@stark.com', '56.431.987-9', '01/09/2001', 'Caixa');
 
 -- TB_FORNECEDOR --
 INSERT INTO tb_fornecedor VALUES (sq_fornecedor.nextval, 'Amazon', '15.436.940/0001-03');
@@ -141,12 +150,28 @@ INSERT INTO tb_procedimento VALUES (sq_procedimento.nextval, 2, 1, '15/05/2022 1
 INSERT INTO tb_procedimento VALUES (sq_procedimento.nextval, 5, 1, '29/12/2022 08:23:43', '29/12/2022 08:56:57');
 
 -- TB_CONSULTA -- 51924  -  12247
-INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 5, 1549.99, '10/02/2022 07:31:00', '10/02/2022 08:22:00');
-INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 2, 265, '15/06/2020 07:45:34', '10/02/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 5, 1549.99, '10/01/2022 07:31:00', '10/01/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '12/02/2022 06:12:32', '12/02/2022 07:29:10');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '13/03/2022 06:12:32', '12/03/2022 07:29:10');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '01/06/2022 06:12:32', '12/06/2022 07:29:10');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '14/07/2022 06:12:32', '12/07/2022 07:29:10');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '12/08/2022 06:12:32', '12/08/2022 07:29:10');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '12/09/2022 06:12:32', '12/09/2022 07:29:10');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 1, 320, '12/01/2021 18:48:32', '12/01/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 1, 320, '12/02/2021 18:48:32', '12/02/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 1, 320, '12/04/2021 18:48:32', '12/04/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 1, 320, '12/06/2021 18:48:32', '12/06/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 1, 320, '12/07/2021 18:48:32', '12/07/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 1, 320, '12/11/2021 18:48:32', '12/11/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 1, 320, '12/12/2021 18:48:32', '12/12/2021 19:29:20');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 2, 265, '05/05/2022 07:45:34', '05/05/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 2, 265, '05/07/2022 07:45:34', '05/07/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 2, 265, '05/01/2022 07:45:34', '05/01/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 2, 265, '11/02/2022 07:45:34', '11/02/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 2, 265, '05/12/2022 07:45:34', '05/12/2022 08:22:00');
+INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 2, 265, '05/02/2022 07:45:34', '05/02/2022 08:22:00');
 INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 4, 650.50, '12/03/2022 12:11:01', '12/03/2022 13:02:02');
-INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 5, 542.99, '12/06/2022 06:12:32', '12/06/2022 07:29:10');
 INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 12247, 3, 159.29, '01/02/2022 07:31:00', '01/02/2022 08:22:00');
-INSERT INTO tb_consulta VALUES (sq_consulta.nextval, 51924, 1, 320, '28/12/2021 18:48:32', '28/12/2021 19:29:20');
 
 -- TB_COMPRA --
 INSERT INTO tb_compra VALUES (sq_compra.nextval, 3, 1, '18/03/2022 11:41:12');
